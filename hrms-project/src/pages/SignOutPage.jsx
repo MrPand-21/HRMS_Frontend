@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SlideBar() {
+export default function SignOutPage() {
     return (
         <div>
             

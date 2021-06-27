@@ -13,6 +13,8 @@ export default function JobList() {
       .catch();
   }, []);
 
+  
+
   return (
     <div>
       <Table celled padded color='grey' inverted>
@@ -37,9 +39,9 @@ export default function JobList() {
               </Table.Cell>
               <Table.Cell singleLine>{job.companyName}</Table.Cell>
               <Table.Cell>
-                {job.numberOfEmptyPositions == null
+                {job.number_of_empty_positions == null
                   ? '0'
-                  : job.numberOfEmptyPositions}
+                  : job.number_of_empty_positions}
               </Table.Cell>
               <Table.Cell singleLine>{job.cityName}</Table.Cell>
               <Table.Cell>{job.createdDate}</Table.Cell>

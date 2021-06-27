@@ -5,9 +5,30 @@
 #menu-blank{
   padding-bottom: 500px;
 }
+.blue{
+  background: blue;
+}
+
+#bg-for-menu{
+
+  position: absolute;
+  z-index: 0;
+  height:100px;
+  width:100px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg,#8686d5,#00d4ff);
+  clip-path: polygon(0 0, 56% 0, 100% 0%, 0% 100%);
+
+}
 
 #menu{
-  position: sticky;
+
+ 
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+  
 }
 
 #content-area{

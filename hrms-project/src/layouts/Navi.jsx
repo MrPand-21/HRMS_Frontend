@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Dropdown, Icon, Input, Menu } from 'semantic-ui-react'
-import SlideBar from './SlideBar';
+import SignedIn from './SignedIn';
+import SignedOut from './SignedOut';
 
 export default function Navi() {
+
+  const [isAuthenticated, setIsAuthanticated] = useState(false)
+
+  function handleSignOut(params) {
+    setIsAuthanticated(false)
+  }
+
+  function handleSignIn(params) {
+    setIsAuthanticated(true)
+  }
+
   return (
-    <div>
-      <Menu vertical id="menu" inverted>
+    <div >
+      
+      <Menu vertical inverted>
         <Menu.Item>
           <Input placeholder='Search...' />
         </Menu.Item>
@@ -49,11 +62,9 @@ export default function Navi() {
             <Dropdown.Item icon='settings' text='Account Settings' />
           </Dropdown.Menu>
         </Dropdown>
+
         <Menu.Item >
-          <SlideBar/>
-        </Menu.Item>
-        <Menu.Item id="menu-blank">
-          
+          {isAuthenticated ? <SignedIn signedOut={handleSignOut}/> : <SignedOut signedIn={handleSignIn}/>}
         </Menu.Item>
 
 
