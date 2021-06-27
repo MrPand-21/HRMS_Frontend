@@ -7,7 +7,7 @@ export default function ChoosingSignInMethod() {
       <Header as='h2' textAlign='center' class='ui white'>
         Sign In As a ...
       </Header>
-      <Button.Group widths='3'>
+      <Button.Group widths='3' >
         <Button>Job Seeker</Button>
         <Button>Employer</Button>
         <Button>System User</Button>

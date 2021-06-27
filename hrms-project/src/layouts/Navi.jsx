@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useParams } from 'react';
 import { Dropdown, Icon, Input, Menu } from 'semantic-ui-react'
 import SignedIn from './SignedIn';
 import SignedOut from './SignedOut';
 
 export default function Navi() {
+  
+
 
   const [isAuthenticated, setIsAuthanticated] = useState(false)
 
@@ -15,22 +17,18 @@ export default function Navi() {
     setIsAuthanticated(true)
   }
 
+
   return (
     <div >
       
-      <Menu vertical inverted>
-        <Menu.Item>
+      <Menu size='large' vertical inverted >
+        <Menu.Item >
           <Input placeholder='Search...' />
         </Menu.Item>
 
-        <Menu.Item>
+        <Menu.Item >
           Home
           <Menu.Menu>
-            <Menu.Item
-              name='search'
-              >
-              Search
-            </Menu.Item>
             <Menu.Item
               name='add'
               >
