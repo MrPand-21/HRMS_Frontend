@@ -4,8 +4,8 @@ import {Formik, Form, useField} from 'formik';
 import * as Yup from 'yup';
 import {useHistory} from 'react-router-dom';
 
-export default function EmployerSignUpPage() {
-  const history = useHistory();
+export default function SystemUserSignUpPage() {
+    const history = useHistory();
 
   const TextField = ({label, ...props}) => {
     // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -35,8 +35,8 @@ export default function EmployerSignUpPage() {
 
   return (
     <div className='employer-header'>
-      <Header as='h2' color='pink'>
-        Employer
+      <Header as='h2' color='orange'>
+        System User
       </Header>
 
       <Formik
@@ -48,7 +48,7 @@ export default function EmployerSignUpPage() {
         })}
         onSubmit={(values) => {
 
-          history.push('/employer/' + values.id);
+          history.push('/systemuser/' + values.id);
         }}>
         <Form>
           <TextField

@@ -8,7 +8,7 @@ export default function JobList() {
     let jobService = new JobService();
 
     jobService
-      .getJobs()
+      .getApprovedJobs()
       .then((result) => setJobs(result.data.data), [])
       .catch();
   }, []);

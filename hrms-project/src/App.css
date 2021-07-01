@@ -8,10 +8,16 @@
 .blue{
   background: blue;
 }
-
+.marginLeft{
+  margin-left: 2.7em;
+}
 
 .labelForJobAddFields{
   margin-right: 2em;
+}
+
+#headerForJob{
+  margin-bottom: 2em;
 }
 
 #deadlineField{
@@ -23,13 +29,13 @@
 
 }
 .marginTop{
-  margin-top: 1em;
+  margin-top: 5em;
 }
 #bg-for-menu{
 
   position: absolute;
   z-index: 0;
-  height:100px;
+  height: 100%;
   width:100px;
   box-sizing: border-box;
   background: linear-gradient(180deg,#8686d5,#00d4ff);
@@ -56,6 +62,7 @@
 	justify-content: center;
   align-items: top;
 	min-height: 100vh;
+  height:120%;
   
 }
 
