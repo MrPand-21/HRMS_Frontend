@@ -8,6 +8,10 @@ export default class JobService {
     return axios.post("http://localhost:8080/api/jobs/add",job)
   }
 
+  deleteJob(id) {
+    return axios.post("http://localhost:8080/api/jobs/delete?id="+id)
+  }
+
   getApprovedJobs() {
     return axios.get("http://localhost:8080/api/jobs/getallapprovedjobs");
   }
