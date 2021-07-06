@@ -15,7 +15,7 @@ export default function JobPositionList() {
 
   return (
     <div>
-      <Table celled padded color='grey' inverted>
+      <Table celled padded inverted>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell singleLine>Position Name</Table.HeaderCell>

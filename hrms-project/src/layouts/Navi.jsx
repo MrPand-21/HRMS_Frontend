@@ -1,7 +1,8 @@
-import React, { useState, useParams } from 'react';
+import React, { useState } from 'react';
 import { Dropdown, Icon, Input, Menu } from 'semantic-ui-react'
 import SignedIn from './SignedIn';
 import SignedOut from './SignedOut';
+import {Link} from 'react-router-dom';
 
 export default function Navi() {
   
@@ -27,17 +28,27 @@ export default function Navi() {
         </Menu.Item>
 
         <Menu.Item >
-          Home
+          <Link to='/' >Home</Link>
           <Menu.Menu>
             <Menu.Item
-              name='add'
+              name='jobs'
               >
-              Add
+              <Link to='/jobs' >Jobs</Link>
             </Menu.Item>
             <Menu.Item
-              name='about'
+              name='jobSeekers'
               >
-              Remove
+              <Link to='/jobseekers' >Job Seekers</Link>
+            </Menu.Item>
+            <Menu.Item
+              name='employers'
+              >
+              <Link to='/employers' >Employers</Link>
+            </Menu.Item>
+            <Menu.Item
+              name='jobPositions'
+              >
+              <Link to='/jobpositions' >Job Positions</Link>
             </Menu.Item>
           </Menu.Menu>
         </Menu.Item>

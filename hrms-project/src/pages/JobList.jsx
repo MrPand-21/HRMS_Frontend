@@ -9,7 +9,7 @@ export default function JobList() {
 
     jobService
       .getApprovedJobs()
-      .then((result) => setJobs(result.data.data), [])
+      .then((result) => setJobs(result.data.data))
       .catch();
   }, []);
 

@@ -13,9 +13,9 @@ export default function ChoosingSignUpMethod() {
         Sign Up As a ...
       </Header>
       <Button.Group widths='3'  >
-        <Button color="red" inverted onClick={() => setcolorOfTitle("red")} as={NavLink} to={'/SignUp/'+ "JobSeeker" }>Job Seeker</Button>
-        <Button color="pink" inverted onClick={() => setcolorOfTitle("pink")}  as={NavLink} to={'/SignUp/'+ "Employer" }>Employer</Button>
-        <Button color="orange" inverted onClick={() => setcolorOfTitle("orange")} as={NavLink} to={'/SignUp/'+ "SystemUser" }>System User</Button>
+        <Button color="red" inverted onClick={() => setcolorOfTitle("red")} as={NavLink} to={'/signup/'+ "jobseeker" }>Job Seeker</Button>
+        <Button color="pink" inverted onClick={() => setcolorOfTitle("pink")}  as={NavLink} to={'/signup/'+ "employer" }>Employer</Button>
+        <Button color="orange" inverted onClick={() => setcolorOfTitle("orange")} as={NavLink} to={'/signup/'+ "systemuser" }>System User</Button>
       </Button.Group>
     </div>
   );

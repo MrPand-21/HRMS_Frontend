@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {Table, Header} from 'semantic-ui-react';
+import {Table, Header, Button, Icon} from 'semantic-ui-react';
 import JobSeekerService from '../services/JobSeekerService';
+import { Link } from 'react-router-dom';
 
 export default function JobSeekerList() {
   const [jobSeekers, setJobSeekers] = useState([]);
@@ -14,7 +15,7 @@ export default function JobSeekerList() {
 
   return (
     <div>
-      <Table celled padded color='gray' inverted>
+      <Table celled padded inverted textAlign="center">
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>images</Table.HeaderCell>
@@ -22,10 +23,9 @@ export default function JobSeekerList() {
             <Table.HeaderCell>languages</Table.HeaderCell>
             <Table.HeaderCell>work experiences</Table.HeaderCell>
             <Table.HeaderCell>attended Schools</Table.HeaderCell>
-            <Table.HeaderCell>email</Table.HeaderCell>
-            <Table.HeaderCell>linkedin</Table.HeaderCell>
-            <Table.HeaderCell>github</Table.HeaderCell>
-            <Table.HeaderCell>info</Table.HeaderCell>
+            
+            <Table.HeaderCell>description</Table.HeaderCell>
+            <Table.HeaderCell>Other infos</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
 
@@ -56,17 +56,17 @@ export default function JobSeekerList() {
                   : jobseeker.languages.map(
                       (language) =>
                         language.languageName +
-                        ' : level ' +
-                        language.languageLevel.levelDescription
+                        ' level : ' +
+                        language.languageLevel.id
                     )}
               </Table.Cell>
               <Table.Cell>
-                {jobseeker.workExperiences.length === 0
+                {!(!!jobseeker.workExperiences)
                   ? 'null'
                   : jobseeker.workExperiences.map(
                       (workExperience) =>
                         'Work place : ' +
-                        workExperience.workPlaceName +
+                        workExperience.workplaceName +
                         ' Position : ' +
                         workExperience.jobPosition.position_name
                     )}
@@ -77,26 +77,24 @@ export default function JobSeekerList() {
                   : jobseeker.attendedSchools.map(
                       (school) =>
                         'School : ' +
-                        school.schoolName +
+                        school.school.schoolName +
                         ' Department : ' +
-                        school.departments.departmentName
+                        null
                     )}
               </Table.Cell>
-              <Table.Cell>{jobseeker.user.email}</Table.Cell>
-              <Table.Cell singleLine>
-                {jobseeker.linkedInAccount === null
-                  ? 'null'
-                  : jobseeker.linkedInAccount}
-              </Table.Cell>
-              <Table.Cell>
-                {jobseeker.githubAccount === null
-                  ? 'null'
-                  : jobseeker.githubAccount}
-              </Table.Cell>
+             
               <Table.Cell>
                 {jobseeker.info === null
                   ? 'nothing has been written'
                   : jobseeker.info}
+              </Table.Cell>
+              <Table.Cell>
+                <Button animated as={Link} to={`/jobseekers/${jobseeker.id}`}>
+                  <Button.Content visible>Go to infos</Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="arrow right" />
+                  </Button.Content>
+                </Button>
               </Table.Cell>
             </Table.Row>
           ))}

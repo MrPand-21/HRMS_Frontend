@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+#jobSeekerDetail{
+  background-color: #eef2fc;
+}
+
 #menu-blank{
   padding-bottom: 500px;
 }
@@ -24,6 +28,11 @@
   margin-right: -54px;
 }
 
+.clearMargins{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .marginBottom{
   margin-bottom: 1em;
 
@@ -43,7 +52,24 @@
 
 }
 
+div [class*="left floated"] {
+  float: left;
+  margin-left: 0.25em;
+}
+
+div [class*="right floated"] {
+  float: right;
+   margin-right: 0.25em;
+} 
+
 .labelForEmployerSignUp{
+  margin-right: 10px;
+  font-size:22px;
+  color: rgb(13, 158, 255);
+  text-align: center;
+}
+
+.labelForSystemUserSignUp{
   margin-right: 10px;
   font-size:22px;
   color: rgb(13, 158, 255);
@@ -55,6 +81,11 @@
   text-align: center;
 }
 
+.jobSeeker-header{
+  margin-top: 3em !important;
+  text-align: center;
+}
+
 #menu{
 
   background-color: #1B1C1D;
@@ -62,8 +93,12 @@
 	justify-content: center;
   align-items: top;
 	min-height: 100vh;
-  height:120%;
+  height:110%;
   
+}
+
+#footer{
+  background-color: #1B1C1D;
 }
 
 #content-area{
@@ -164,7 +199,7 @@ h6 {
 }
 
 h1 {
-  font-size: 3.052rem;
+  font-size: 3.052rem !important;
   line-height: 1;
 }
 

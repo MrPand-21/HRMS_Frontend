@@ -2,6 +2,7 @@ import './App.css';
 import Navi from './layouts/Navi';
 import Dashboard from './layouts/Dashboard';
 import {Grid} from 'semantic-ui-react';
+import Footer from './layouts/Footer';
 
 
 
@@ -18,6 +19,7 @@ function App() {
             </Grid.Column>
           </Grid.Row>
         </Grid>
+        <Footer/>
     </div>
   );
 }
