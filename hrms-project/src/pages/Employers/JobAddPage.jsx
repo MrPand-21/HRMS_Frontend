@@ -1,11 +1,11 @@
 import {Formik, Form, useField} from 'formik';
 import React, {useEffect, useState} from 'react';
 import {useHistory, useParams} from 'react-router';
-import JobService from '../services/JobService';
-import JobPositionService from '../services/JobPositionService';
-import CityService from '../services/CityService';
-import WorkPlaceService from '../services/WorkPlaceService';
-import WorkTimeService from '../services/WorkTimeService';
+import JobService from '../../services/JobService';
+import JobPositionService from '../../services/JobPositionService';
+import CityService from '../../services/CityService';
+import WorkPlaceService from '../../services/WorkPlaceService';
+import WorkTimeService from '../../services/WorkTimeService';
 import * as Yup from 'yup';
 import {
   Button,

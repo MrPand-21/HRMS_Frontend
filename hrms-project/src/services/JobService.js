@@ -23,4 +23,8 @@ export default class JobService {
   setActive(id){
     return axios.post("http://localhost:8080/api/jobs/setactivetojobvisibility?id="+id)
   }
+
+  getJobById(id){
+    return axios.get("http://localhost:8080/api/jobs/getjobbyid?id="+id);
+  }
 }

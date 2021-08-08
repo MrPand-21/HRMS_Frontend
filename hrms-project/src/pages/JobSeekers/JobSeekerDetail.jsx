@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 // import {  useHistory } from 'react-router';
-import { Table, Header, Input, Grid, Segment, Image, Card, Item, Icon, Label, Divider } from 'semantic-ui-react';
-import JobSeekerService from '../services/JobSeekerService'
+import { Table, Header, Grid, Segment, Image, Card, Label, Divider } from 'semantic-ui-react';
+import JobSeekerService from '../../services/JobSeekerService'
 
 export default function JobSeekerDetail() {
 
@@ -52,7 +52,7 @@ export default function JobSeekerDetail() {
                             <Grid.Column computer={16} >
                                 <Segment.Group>
                                     <Segment vertical color="red" padded="very" secondary rounded="true" stacked>
-                                        <Label attached='top' color="red" basic><Header color="red" as="h3">EDUCATION</Header></Label>
+                                        <Label attached='top' basic color="red" ><Header color="red" as="h3">EDUCATION</Header></Label>
                                         <Card.Group centered itsPerRow={6}>
                                             {jobSeeker.attendedSchools?.map((school) =>
 

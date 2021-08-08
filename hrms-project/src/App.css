@@ -20,6 +20,22 @@
   margin-right: 2em;
 }
 
+.paddingRightSmall{
+  padding-right:1em;
+}
+
+.paddingRight{
+  padding-right:2em;
+}
+
+.paddingRightMedium{
+  padding-right:3em;
+}
+
+.paddingRightLarge{
+  padding-right:5em;
+}
+
 #headerForJob{
   margin-bottom: 2em;
 }
@@ -35,6 +51,10 @@
 
 .marginBottom{
   margin-bottom: 1em;
+
+}
+.marginTopSmall{
+  margin-top: 1em;
 
 }
 

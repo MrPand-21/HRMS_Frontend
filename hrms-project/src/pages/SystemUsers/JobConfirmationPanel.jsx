@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import JobService from '../services/JobService';
-import ActivationPanelService from '../services/ActivationPanelService';
+import JobService from '../../services/JobService';
+import ActivationPanelService from '../../services/ActivationPanelService';
 import {
   Button,
   Checkbox,

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Table, Header, Button, Icon} from 'semantic-ui-react';
-import JobSeekerService from '../services/JobSeekerService';
+import JobSeekerService from '../../services/JobSeekerService';
 import { Link } from 'react-router-dom';
 
 export default function JobSeekerList() {
@@ -89,7 +89,7 @@ export default function JobSeekerList() {
                   : jobseeker.info}
               </Table.Cell>
               <Table.Cell>
-                <Button animated as={Link} to={`/jobseekers/${jobseeker.id}`}>
+                <Button animated color="red" basic inverted as={Link} to={`/jobseekers/${jobseeker.id}`}>
                   <Button.Content visible>Go to infos</Button.Content>
                   <Button.Content hidden>
                     <Icon name="arrow right" />

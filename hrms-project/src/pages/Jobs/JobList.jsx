@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {Table, Header} from 'semantic-ui-react';
-import JobService from '../services/JobService';
+import {Table, Header, Button, Icon} from 'semantic-ui-react';
+import JobService from '../../services/JobService';
+import { Link } from 'react-router-dom';
 
 export default function JobList() {
   const [jobs, setJobs] = useState([]);
@@ -17,15 +18,16 @@ export default function JobList() {
 
   return (
     <div>
-      <Table celled padded color='grey' inverted>
+      <Table celled padded inverted>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell singleLine>Postion</Table.HeaderCell>
+            <Table.HeaderCell>Postion</Table.HeaderCell>
             <Table.HeaderCell>Company Name</Table.HeaderCell>
             <Table.HeaderCell>Number of Empty Position</Table.HeaderCell>
             <Table.HeaderCell>City</Table.HeaderCell>
             <Table.HeaderCell>Created date</Table.HeaderCell>
             <Table.HeaderCell>Deadline</Table.HeaderCell>
+            <Table.HeaderCell>Other infos</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
 
@@ -33,7 +35,7 @@ export default function JobList() {
           {jobs.map((job) => (
             <Table.Row key={job.id} textAlign='center'>
               <Table.Cell>
-                <Header as='h2' textAlign='center' class='ui white'>
+                <Header as='h2' inverted>
                   {job.positionName}
                 </Header>
               </Table.Cell>
@@ -46,6 +48,14 @@ export default function JobList() {
               <Table.Cell singleLine>{job.cityName}</Table.Cell>
               <Table.Cell>{job.createdDate}</Table.Cell>
               <Table.Cell>{job.deadLine}</Table.Cell>
+              <Table.Cell>
+                <Button animated primary  basic inverted as={Link} to={`/jobs/${job.id}`}>
+                  <Button.Content  visible>Go to Detail<Icon name="right arrow" /></Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="file alternate" />
+                  </Button.Content>
+                </Button>
+              </Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
