@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Table, Header, Rating} from 'semantic-ui-react';
+import {Table, Header} from 'semantic-ui-react';
 import JobService from '../services/JobService';
 
 export default function JobList() {

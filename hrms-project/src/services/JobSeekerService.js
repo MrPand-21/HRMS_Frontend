@@ -6,6 +6,7 @@ export default class JobSeekersService {
   }
 
   getJobSeekerById(id){
+    
     return axios.get("http://localhost:8080/api/jobseekers/getbyid?id="+id)
   }
 }

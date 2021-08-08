@@ -19,7 +19,7 @@ import { ToastContainer } from "react-toastify";
 export default function Dashboard() {
     return (
         <div id="content-area">
-            <ToastContainer position="bottom-right" />
+            <ToastContainer position="bottom-right"/>
             <Route exact path="/" component={MainPage} />
             <Route exact path="/home" component={MainPage} />
             <Route exact path="/jobs" component={JobList} />
@@ -35,7 +35,6 @@ export default function Dashboard() {
             <Route exact path="/jobseekers" component={JobSeekerList} />
             <Route exact path="/jobseekers/:jobSeekerId" component={JobSeekerDetail} />
             <Route exact path="/jobpositions" component={JobPositionList} />
-            <Route exact path="/jobs" component={JobList} />
         </div>
     )
 }

@@ -3,7 +3,7 @@
 }
 
 #jobSeekerDetail{
-  background-color: #eef2fc;
+  background-color: #f09595c0;
 }
 
 #menu-blank{
@@ -36,6 +36,10 @@
 .marginBottom{
   margin-bottom: 1em;
 
+}
+
+.marginBottomMedium{
+  margin-bottom: 2em;
 }
 .marginTop{
   margin-top: 5em;

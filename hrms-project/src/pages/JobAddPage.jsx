@@ -124,7 +124,7 @@ export default function JobAddPage() {
     return (
       <div>
         <label for={props.id || props.name}>{label}</label>
-        <Dropdown fluid clearable item search selection {...props} />
+        <Dropdown fluid clearable item search selection {...field} {...props} />
 
         {meta.touched && meta.error ? (
           <div class='ui pointing red basic label'>{meta.error}</div>
@@ -138,7 +138,7 @@ export default function JobAddPage() {
   };
 
   const handleOnSubmit = (values) => {
-    values.employerId = 1;
+    values.employerId = employerId;
     values.createdDate = new Date();
     jobService.addJob(values);
     alert("Job added. After system user's confirmation, it will be listed.");

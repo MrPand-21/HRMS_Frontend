@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
+// import { useState } from 'react';
 import {Button} from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom'
 
 export default function SignedOutSignedOut(params) {
 
-    const [signUpOrIn, setSignUpOrIn] = useState()
+    // const [signUpOrIn, setSignUpOrIn] = useState()
 
 
 
